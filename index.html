@@ -12,11 +12,18 @@
 <div class="container">
     <div class="row">
         <div class="well">
+
             <div id="app">
                 <input type="text" class="form-control" v-on:input="ChangeTitle">
                 <br>
                 <p>{{ title }}</p>
+                <p>{{ SayHellow() }}</p>
+                <p>{{ SayBy() }}</p>
+
+                <a v-bind:href="link">toplearn</a>
             </div>
+
+
         </div>
     </div>
 </div>
