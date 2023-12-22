@@ -1,4 +1,4 @@
-let myApplicatin;
+let myApplicatin
 
 myApplicatin = new Vue({
     el: '#app',
@@ -10,10 +10,10 @@ myApplicatin = new Vue({
         ChangeTitle: function (event) {
             this.title = event.target.value;
         },
-        SayHellow: function (){
+        SayHellow: function () {
             return 'Hello toplearn'
         },
-        SayBy: function (){
+        SayBy: function () {
             return this.title;
         }
     }
