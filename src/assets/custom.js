@@ -27,5 +27,11 @@ myApplicatin = new Vue({
             this.x = event.clientX;
             this.y = event.clientY;
         },
+        test: function (event) {
+            event.stopPropagation();
+        },
+        alert : function () {
+            alert('Hello');
+        }
     }
 });

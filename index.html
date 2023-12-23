@@ -5,7 +5,7 @@
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vite App</title>
-    <link rel="stylesheet" href="src/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,24 +21,44 @@
                 <!--<p>{{ SayHellow() }}</p>-->
                 <!--<p>{{ SayBy() }}</p>-->
 
-                <div class="col-md-3">
-                    <a class="btn btn-success btn-block" v-on:click="Increase(3,$event)">{{ counter }}</a>
-                    <hr>
-                    <p v-once>first: {{ counter }}</p>
-                    <p>second: {{ counter }}</p>
-                </div>
-                <br>
-                <div class="col-md-9">
-                    <div class="bordered" v-on:mousemove="GetCursor">
-                        <p>client x : {{ x }}</p>
-                        <p>client y : {{ y }}</p>
+
+                <!--<div class="col-md-3">-->
+                <!--<a class="btn btn-success btn-block" v-on:click="Increase(3,$event)">{{ counter }}</a>-->
+                <!--<hr>-->
+                <!--<p v-once>first: {{ counter }}</p>-->
+                <!--<p>second: {{ counter }}</p>-->
+                <!--</div>-->
+                <!--<br>-->
+
+
+                <!--<div class="col-md-9">-->
+                <!--<div class="bordered" v-on:mousemove="GetCursor">-->
+                <!--<p v-on:mousemove="test"><span>client x : {{ x }}</span></p>-->
+                <!--<p v-on:mousemove.self.stop=""><span> client y : {{ y }}</span></p>-->
+                <!--<p v-on:mousemove.once="alert"><span> client y : {{ y }}</span></p>-->
+                <!--</div>-->
+                <!--</div>-->
+
+                <div class="col-md-4">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">register</h3>
+                            <div class="panel-body">
+                                <form action="POST" role="form">
+                                    <div class="form-group">
+                                        <label for="email">label:</label>
+                                        <input type="email" class="form-control" v-on:keyup.left="alert">
+                                    </div>
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
+
+                    <!--<a v-bind:href="link">toplearn</a>-->
+                    <div class="clearfix"></div>
                 </div>
-
-                <!--<a v-bind:href="link">toplearn</a>-->
             </div>
-
-
         </div>
     </div>
 </div>
