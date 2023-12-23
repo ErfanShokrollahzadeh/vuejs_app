@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vite App</title>
     <link rel="stylesheet" href="src/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <br>
@@ -14,13 +15,27 @@
         <div class="well">
 
             <div id="app">
-                <input type="text" class="form-control" v-on:input="ChangeTitle">
-                <br>
-                <p>{{ title }}</p>
-                <p>{{ SayHellow() }}</p>
-                <p>{{ SayBy() }}</p>
+                <!--<input type="text" class="form-control" v-on:input="ChangeTitle">-->
+                <!--<br>-->
+                <!--<p>{{ title }}</p>-->
+                <!--<p>{{ SayHellow() }}</p>-->
+                <!--<p>{{ SayBy() }}</p>-->
 
-                <a v-bind:href="link">toplearn</a>
+                <div class="col-md-3">
+                    <a class="btn btn-success btn-block" v-on:click="Increase(3,$event)">{{ counter }}</a>
+                    <hr>
+                    <p v-once>first: {{ counter }}</p>
+                    <p>second: {{ counter }}</p>
+                </div>
+                <br>
+                <div class="col-md-9">
+                    <div class="bordered" v-on:mousemove="GetCursor">
+                        <p>client x : {{ x }}</p>
+                        <p>client y : {{ y }}</p>
+                    </div>
+                </div>
+
+                <!--<a v-bind:href="link">toplearn</a>-->
             </div>
 
 
