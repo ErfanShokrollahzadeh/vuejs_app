@@ -15,6 +15,23 @@
         <div class="well">
 
             <div id="app">
+
+                <div class="col-md-3">
+                    <a v-on:click="counter++" class="btn btn-success btn-block">Increase counter</a>
+                    <br>
+                    <br>
+                    <a v-on:click="counter--" class="btn btn-success btn-block">Decrease counter</a>
+                    <hr>
+                    <a v-on:click="secondcounter++" class="btn btn-success btn-block">Increase secondcounter</a>
+                    <br><br>
+                    <p>Counter: {{ counter }}</p>
+                    <p>secondcounter: {{ secondcounter }}</p>
+                    <p> result: {{ GetResult() }}</p>
+                    <p> computed result: {{ GetComputedResult }}</p>
+<!--                    <input type="number" class="form-control" v-model="counter">-->
+                </div>
+
+
                 <!--<input type="text" class="form-control" v-on:input="ChangeTitle">-->
                 <!--<br>-->
                 <!--<p>{{ title }}</p>-->
@@ -39,25 +56,24 @@
                 <!--</div>-->
                 <!--</div>-->
 
-                <div class="col-md-4">
-                    <div class="panel panel-success">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">register</h3>
-                            <div class="panel-body">
-                                <form action="POST" role="form">
-                                    <div class="form-group">
-                                        <label for="email">label:</label>
-                                        <input type="email" class="form-control" v-on:keyup.left="alert">
-                                    </div>
-                                    <button type="submit" class="btn btn-success">Submit</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                <!--                <div class="col-md-4">-->
+                <!--                    <div class="panel panel-success">-->
+                <!--                        <div class="panel-heading">-->
+                <!--                            <h3 class="panel-title">register</h3>-->
+                <!--                            <div class="panel-body">-->
+                <!--                                <form action="POST" role="form">-->
+                <!--                                    <div class="form-group">-->
+                <!--                                        <label for="email">label:</label>-->
+                <!--                                        <input type="email" class="form-control" v-on:keyup.left="alert">-->
+                <!--                                    </div>-->
+                <!--                                    <button type="submit" class="btn btn-success">Submit</button>-->
+                <!--                                </form>-->
+                <!--                            </div>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
 
-                    <!--<a v-bind:href="link">toplearn</a>-->
-                    <div class="clearfix"></div>
-                </div>
+                <!--<a v-bind:href="link">toplearn</a>-->
+                <div class="clearfix"></div>
             </div>
         </div>
     </div>
