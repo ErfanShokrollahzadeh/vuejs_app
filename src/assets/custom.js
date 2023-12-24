@@ -51,5 +51,14 @@ myApplicatin = new Vue({
         GetComputedResult: function () {
             return this.counter > 5 ? 'Bigger than 5' : 'Smaller than 5';
         }
+    },
+    watch: {
+        counter: function (value) {
+            if (value > 10) {
+                setInterval(() => {
+                    this.counter = 0;
+                }, 3000);
+            }
+        }
     }
 });
