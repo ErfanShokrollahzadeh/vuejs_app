@@ -15,21 +15,55 @@
         <div class="well">
 
             <div id="app">
-                <div class="col-md-12">
-                    <template v-if="show">
-                        <p>show me with if</p>
-                        <p>show me with if by test property</p>
-                        <p>show me with else</p>
-                    </template>
-
-
-                    <!--                    <p v-show="show">show me with if</p>-->
-                    <div class="col-md-3">
-                        <a class="btn btn-success btn-block" v-on:click="show=!show">swich</a>
-                    </div>
-
-                    <div class="clearfix"></div>
+                <ul>
+                    <li v-for=" (name, index) in names" v-key="name">
+                        {{ name }} ({{ index }})
+                    </li>
+                </ul>
+                <div class="col-md-3">
+                    <a class="btn btn-success btn-block" v-on:click="names.push('ali')">add name</a>
                 </div>
+                <div class="clearfix"></div>
+                <hr>
+                <ul>
+                    <li v-for=" (name, index) in names">
+                        <spam>{{ name }}</spam>
+                        -
+                        <spam>({{ index }})</spam>
+                    </li>
+                </ul>
+                <hr>
+                <ul>
+                    <li v-for="person in persons">
+                        <!--                        <p>name: {{ person.name }}</p>-->
+                        <!--                        <p>name: {{ person.family }}</p>-->
+                        <!--                        <p>name: {{ person.age }}</p>-->
+                        <p v-for="(value,key,index) in person">
+                            {{ key }} : {{ value }} ({{ index }})
+                        </p>
+                    </li>
+                </ul>
+                <hr>
+                <div>
+                    <spam v-for="n in 10">({{ n }})</spam>
+                </div>
+
+
+                <!--                <div class="col-md-12">-->
+                <!--                    <template v-if="show">-->
+                <!--                        <p>show me with if</p>-->
+                <!--                        <p>show me with if by test property</p>-->
+                <!--                        <p>show me with else</p>-->
+                <!--                    </template>-->
+
+
+                <!--                    &lt;!&ndash;                    <p v-show="show">show me with if</p>&ndash;&gt;-->
+                <!--                    <div class="col-md-3">-->
+                <!--                        <a class="btn btn-success btn-block" v-on:click="show=!show">swich</a>-->
+                <!--                    </div>-->
+
+                <!--                    <div class="clearfix"></div>-->
+                <!--                </div>-->
 
 
                 <!--                <div class="col-md-12">-->

@@ -16,6 +16,11 @@ myApplicatin = new Vue({
         className: '',
         show: false,
         test: true,
+        names: ['mohammad','iman', 'elnaz'],
+        persons: [
+            {name:'mohhamad', family:'mohammadi', age: 20},
+            {name:'reza', family:'mohammadi', age: 12}
+        ]
     },
     methods: {
         ChangeTitle: function (event) {
