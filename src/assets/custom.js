@@ -10,6 +10,8 @@ myApplicatin = new Vue({
         x: 0,
         y: 0,
         resutl: '',
+        color: 'red',
+        width: '150',
     },
     methods: {
         ChangeTitle: function (event) {
@@ -50,6 +52,12 @@ myApplicatin = new Vue({
     computed: {
         GetComputedResult: function () {
             return this.counter > 5 ? 'Bigger than 5' : 'Smaller than 5';
+        },
+        MyStyle: function () {
+            return {
+                backgroundColor: 'red',
+                width: '150px'
+            }
         }
     },
     watch: {
