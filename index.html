@@ -16,13 +16,30 @@
 
             <div id="app">
                 <div class="col-md-12">
-                    <div class="demo" v-bind:class="Class1" v-on:click="attachRed=!attachRed"></div>
-                    <div class="demo" v-bind:class="{red:attachRed}"></div>
-                    <div class="demo" v-bind:class="[className, {red:attachRed}]"></div>
+                    <template v-if="show">
+                        <p>show me with if</p>
+                        <p>show me with if by test property</p>
+                        <p>show me with else</p>
+                    </template>
+
+
+                    <!--                    <p v-show="show">show me with if</p>-->
+                    <div class="col-md-3">
+                        <a class="btn btn-success btn-block" v-on:click="show=!show">swich</a>
+                    </div>
+
                     <div class="clearfix"></div>
-                    <hr>
-                    <input type="text" class="form-control" v-model="className">
                 </div>
+
+
+                <!--                <div class="col-md-12">-->
+                <!--                    <div class="demo" v-bind:class="Class1" v-on:click="attachRed=!attachRed"></div>-->
+                <!--                    <div class="demo" v-bind:class="{red:attachRed}"></div>-->
+                <!--                    <div class="demo" v-bind:class="[className, {red:attachRed}]"></div>-->
+                <!--                    <div class="clearfix"></div>-->
+                <!--                    <hr>-->
+                <!--                    <input type="text" class="form-control" v-model="className">-->
+                <!--                </div>-->
 
 
                 <!--                <div class="col-md-12">-->

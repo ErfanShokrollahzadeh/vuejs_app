@@ -14,6 +14,8 @@ myApplicatin = new Vue({
         width: '150',
         attachRed: true,
         className: '',
+        show: false,
+        test: true,
     },
     methods: {
         ChangeTitle: function (event) {
