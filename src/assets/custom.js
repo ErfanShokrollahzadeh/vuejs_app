@@ -12,6 +12,8 @@ myApplicatin = new Vue({
         resutl: '',
         color: 'red',
         width: '150',
+        attachRed: true,
+        className: '',
     },
     methods: {
         ChangeTitle: function (event) {
@@ -57,6 +59,12 @@ myApplicatin = new Vue({
             return {
                 backgroundColor: 'red',
                 width: '150px'
+            }
+        },
+        Class1: function (){
+            return{
+                red: this.attachRed,
+                blue: !this.attachRed
             }
         }
     },
