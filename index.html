@@ -14,7 +14,23 @@
     <div class="row">
         <div class="well">
 
-            <div id="app">
+            <div id="app2">
+                <h1 v-if="IsShowTitle">{{ title }}</h1>
+                <button v-on:click="ShowTitle">show</button>
+                <button v-on:click="HideTitle">hide</button>
+                <button v-on:click="ChangeApp1Title">Change Title</button>
+
+                <div class="clearfix"></div>
+            </div>
+            <hr>
+            <div id="app1">
+                <h1 v-if="IsShowTitle">{{ title }}</h1>
+                <button v-on:click="ShowTitle" ref="showtitlebutton">show</button>
+                <button v-on:click="HideTitle">hide</button>
+
+
+
+
                 <!--                <ul>-->
                 <!--                    <li v-for=" (name, index) in names" v-key="name">-->
                 <!--                        {{ name }} ({{ index }})-->

@@ -1,9 +1,11 @@
 let myApplicatin
+let app2
+let app3
 
 myApplicatin = new Vue({
-    el: '#app',
+    el: '#app1',
     data: {
-        title: 'Hello vue.js',
+        title: 'This is app 1',
         link: 'http://toplearn.com',
         counter: 0,
         secondcounter: 0,
@@ -16,11 +18,12 @@ myApplicatin = new Vue({
         className: '',
         show: false,
         test: true,
-        names: ['mohammad','iman', 'elnaz'],
+        names: ['mohammad', 'iman', 'elnaz'],
         persons: [
-            {name:'mohhamad', family:'mohammadi', age: 20},
-            {name:'reza', family:'mohammadi', age: 12}
-        ]
+            {name: 'mohhamad', family: 'mohammadi', age: 20},
+            {name: 'reza', family: 'mohammadi', age: 12}
+        ],
+        IsShowTitle: true,
     },
     methods: {
         ChangeTitle: function (event) {
@@ -56,7 +59,13 @@ myApplicatin = new Vue({
         },
         GetResult: function () {
             return this.counter > 5 ? 'Bigger than 5' : 'Smaller than 5';
-        }
+        },
+        ShowTitle: function () {
+            this.IsShowTitle = true;
+        },
+        HideTitle: function () {
+            this.IsShowTitle = false;
+        },
     },
     computed: {
         GetComputedResult: function () {
@@ -68,8 +77,8 @@ myApplicatin = new Vue({
                 width: '150px'
             }
         },
-        Class1: function (){
-            return{
+        Class1: function () {
+            return {
                 red: this.attachRed,
                 blue: !this.attachRed
             }
@@ -82,6 +91,43 @@ myApplicatin = new Vue({
                     this.counter = 0;
                 }, 3000);
             }
+        },
+        title: function () {
+            alert('title is changed')
+            this.$refs.showtitlebutton.innerText = 'change by ref';
         }
     }
+});
+
+myApplicatin.newTitle = 'new title'; // this is not reactive or native
+
+console.log(myApplicatin);
+setTimeout(() => {
+    myApplicatin.title = 'changed by timer';
+}, 3000);
+
+
+app2 = new Vue({
+    el: '#app2',
+    data: {
+        title: 'This is app 2',
+        IsShowTitle: true,
+    },
+    methods: {
+        ShowTitle: function () {
+            this.IsShowTitle = true;
+        },
+        HideTitle: function () {
+            this.IsShowTitle = false;
+        },
+        ChangeApp1Title: function () {
+            myApplicatin.title = 'changed by app 2';
+        }
+    },
+});
+
+app3 = new Vue({
+    el: '',
+    data: {
+    },
 });
