@@ -35,15 +35,15 @@ myaplication = new Vue({
 
             const input = this.$refs.UserNameInput;
 
-            const input2 = document.querySelector('#usernameinput');
+            const input2 = document.querySelector('#usernameinput'); // this line work same line 36
 
             if (this.UserName === '') {
-                input2.classList.add('error');
-                input2.classList.remove('success');
+                input.classList.add('error');
+                input.classList.remove('success');
             }
             else{
-                input2.classList.remove('error');
-                input2.classList.add('success');
+                input.classList.remove('error');
+                input.classList.add('success');
             }
         },
     },
